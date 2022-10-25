@@ -13,10 +13,8 @@ export const ContactsList = () => {
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(filter)
   )
-  console.log(contacts);
 
   useEffect(() => {
-    console.log(contacts)
   }, [contacts, filteredContacts])
   
   return (
