@@ -8,7 +8,7 @@ export const App = () => {
     <div
     className={phonebook}
       style={{
-        height: '100vh',
+        minHeight: '100vh',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
