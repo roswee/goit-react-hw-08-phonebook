@@ -1,8 +1,8 @@
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { addContact } from 'redux/operations';
-import { fetchContacts } from 'redux/operations';
+import { addContact } from 'redux/phonebook/operations';
+import { fetchContacts } from 'redux/phonebook/operations';
 
 export const Adder = () => {
   const contacts = useSelector(state => state.contacts.contacts);

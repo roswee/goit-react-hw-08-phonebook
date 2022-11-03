@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://63514bf63e9fa1244e5aed30.mockapi.io';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchContacts',
@@ -37,3 +37,8 @@ export const removeContact = createAsyncThunk(
     alert(e.messsage);
   }
 });
+
+
+// AUTH
+
+
