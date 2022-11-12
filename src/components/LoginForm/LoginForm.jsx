@@ -18,16 +18,14 @@ export const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
-        Email
-        <input type="email" name="email" />
+    <form onSubmit={handleSubmit} autoComplete="off" className="d-flex flex-column mb-3">
+      <label className="p-2 d-flex justify-content-center">
+        <input type="email" name="email"  className="form-control" placeholder="Email"/>
       </label>
-      <label>
-        Password
-        <input type="password" name="password" />
+      <label className="p-2 d-flex justify-content-center">
+        <input type="password" name="password" className="form-control" placeholder="Password" />
       </label>
-      <button type="submit">Log In</button>
+      <button type="submit" className="btn btn-primary">Log In</button>
     </form>
   );
 };

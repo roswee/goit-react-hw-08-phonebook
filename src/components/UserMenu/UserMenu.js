@@ -7,9 +7,9 @@ export const UserMenu = () => {
   const { user } = useAuth();
 
   return (
-    <div>
-      <p> Welcome, {user.name}</p>
-      <button type="button" onClick={() => dispatch(logOut())}>
+    <div className="navbar navbar-dark bg-dark sticky-top justify-content-center text-white align-items-baseline">
+      <p> Welcome, {user.name}!</p>
+      <button type="button" className="btn btn-outline-secondary" onClick={() => dispatch(logOut())}>
         Logout
       </button>
     </div>

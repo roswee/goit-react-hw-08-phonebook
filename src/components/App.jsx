@@ -1,4 +1,3 @@
-import style from 'components/Phonebook/Phonebook.module.css';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { useAuth } from 'hooks/useAuth';
@@ -7,12 +6,12 @@ import { refreshUser } from 'redux/auth/operations';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { Navigation } from './Navigation/Navigation';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
 const PhonebookPage = lazy(() => import('../pages/PhonebookPage'));
-const { phonebook } = style;
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -25,16 +24,7 @@ export const App = () => {
   return isRefreshing ? (
     'Please wait, data is fetching...'
   ) : (
-    <div
-      className={phonebook}
-      style={{
-        minHeight: '100vh',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
+    <div>
       <Suspense fallback={null}>
         <Navigation/>
         <Routes>
