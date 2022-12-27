@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { addContact } from 'redux/phonebook/operations';
