@@ -34,30 +34,34 @@ export const Adder = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        {' '}
-        Name
+    <form onSubmit={handleSubmit} className="text-white">
+      <label className="input-group mb-3 mt-3">
+      <div className="input-group-prepend">
+        <span className="input-group-text" id="inputGroup-sizing-default">Name</span>
+        </div>
         <input
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
+          className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
         />
       </label>
-      <label>
-        {' '}
-        Number
+      <label className="input-group mb-3">
+      <div className="input-group-prepend">
+        <span className="input-group-text" id="inputGroup-sizing-default">Number</span>
+        </div>
         <input
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
+          className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
         />
       </label>
-      <button type="submit">Add contact</button>
+      <button type="submit" style={{width:"100%"}} className="btn btn-success">Add contact</button>
     </form>
   );
 };

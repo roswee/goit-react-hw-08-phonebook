@@ -9,7 +9,6 @@ export const ContactsList = () => {
   const isLoading = useSelector(state => state.isLoading);
   const contacts = useSelector(state => state.contacts.contacts);
   const filter = useSelector(state => state.filter);
-  console.log(filter)
   const filteredContacts = () => {
     if (filter === undefined) {return contacts}
     else {
@@ -27,12 +26,12 @@ export const ContactsList = () => {
     <>
       {isLoading && <b>Loading contacts...</b>}
       {contacts.length === 0 ? (
-        <p>Add some contact to see them.</p>
+        <p className="text-white">Add some contact to see them.</p>
       ) : (
-        <ul>
+        <ul className="text-white list-group list-group-flush">
           {filteredContacts().map(contact =>
           (
-            <li key={contact.id}>
+            <li className="list-group-item m-1" style={{maxWidth: "350px"}} key={contact.id}>
               {contact.name}: {contact.phone}{' '}
               <button
                 type="submit"
