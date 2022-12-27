@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/266.4d6734c2.chunk.js","mappings":"gMAAe,SAASA,IACpB,OACI,0BACI,wEAKX,C","sources":["pages/Home.js"],"sourcesContent":["export default function Home() {\n    return(\n        <div>\n            <h1>\n                Welcome on my app to collect your contacts\n            </h1>\n        </div>\n    )\n}"],"names":["Home"],"sourceRoot":""}
