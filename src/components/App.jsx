@@ -17,9 +17,9 @@ export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 
-  useEffect(() => {
-    dispatch(refreshUser());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(refreshUser());
+  // }, [dispatch]);
 
   return isRefreshing ? (
     'Please wait, data is fetching...'
@@ -28,7 +28,7 @@ export const App = () => {
       <Suspense fallback={null}>
         <Navigation/>
         <Routes>
-          <Route index element={<HomePage />} />
+          <Route index path="/" element={<HomePage />} />
           <Route
             path="/register"
             element={

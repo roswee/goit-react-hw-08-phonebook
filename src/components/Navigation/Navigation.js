@@ -11,7 +11,7 @@ export const Navigation = () => {
       {isLoggedIn ? (
         <UserMenu />
       ) : (
-        <div class="nav justify-content-between">
+        <div className="nav justify-content-between">
           <NavLink as="li" to="/login" className="nav-link text-white">
             Login
           </NavLink>{' '}

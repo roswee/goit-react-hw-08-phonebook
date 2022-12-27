@@ -16,7 +16,7 @@ export const Adder = () => {
     evt.preventDefault();
     const form = evt.currentTarget;
     const name = form.elements.name.value;
-    const phone = form.elements.phone.value;
+    const number = form.elements.number.value;
     form.reset()
 
     const nameArray = contacts.map(contact => {
@@ -28,9 +28,8 @@ export const Adder = () => {
     }
     return dispatch(
       addContact({
-        id: nanoid(),
         name,
-        phone,
+        number,
       })
     );
   };
@@ -53,7 +52,7 @@ export const Adder = () => {
         Number
         <input
           type="tel"
-          name="phone"
+          name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required

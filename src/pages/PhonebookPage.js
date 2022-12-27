@@ -8,7 +8,7 @@ export default function PhonebookPage() {
       <h1 className="nav text-white justify-content-center">Phonebook</h1>
       <Adder />
       <Filter/>
-      <ContactsList />
+      <ContactsList/>
     </>
   );
 };
