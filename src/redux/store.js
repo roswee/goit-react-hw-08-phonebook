@@ -10,6 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import logger from 'redux-logger';
 import { contactsReducer } from './phonebook/contactsSlice';
 import { filterReducer } from './phonebook/filterSlice';
 import { authReducer } from './auth/slice';
@@ -28,6 +29,10 @@ const authPersistConfig = {
   storage,
   whitelist: ['token'],
 };
+
+if (process.env.NODE_ENV === 'development') {
+  middleware.push(logger);
+}
 
 export const store = configureStore({
   reducer: {
