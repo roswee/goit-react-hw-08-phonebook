@@ -12,7 +12,7 @@ const contactsSlice = createSlice({
     [fetchContacts.fulfilled](state, { payload }) {
       state.isLoading = false;
       state.error = null;
-      state.contacts = payload
+      state.contacts = payload;
     },
     [fetchContacts.rejected](state, { payload }) {
         alert(payload);
