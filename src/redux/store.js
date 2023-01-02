@@ -1,4 +1,4 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'development') {
   middleware.push(logger);
 }
 
-export const store = configureStore({
+export let store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
     contacts: contactsReducer,
@@ -44,4 +44,4 @@ export const store = configureStore({
   devTools: process.env.NODE_ENV === 'development',
 });
 
-export const persistor = persistStore(store);
+export let persistor = persistStore(store);
