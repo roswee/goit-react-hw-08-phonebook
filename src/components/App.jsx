@@ -15,7 +15,6 @@ const LoginPage = lazy(() => import('../pages/Login'));
 const PhonebookPage = lazy(() => import('../pages/PhonebookPage'));
 
 export const App = () => {
-  const { isRefreshing } = useAuth();
 
   const dispatch = useDispatch();
 
@@ -23,14 +22,12 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return isRefreshing ? (
-    'Please wait, data is fetching...'
-  ) : (
+  return (
     <div>
       <Suspense fallback={null}>
         <Navigation/>
         <Routes>
-          <Route index path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route
             path="/register"
             element={
