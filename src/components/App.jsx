@@ -14,9 +14,9 @@ const PhonebookPage = lazy(() => import('../pages/PhonebookPage'));
 export const App = () => {
   const { isRefreshing } = useAuth();
 
-  // useEffect(() => {
-  //   dispatch(refreshUser());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
 
   return isRefreshing ? (
     'Please wait, data is fetching...'
