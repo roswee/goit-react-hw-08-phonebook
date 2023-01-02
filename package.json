@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://roswee.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://phonebook2137.netlify.app/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -14,6 +14,9 @@
     "axios": "^1.1.3",
     "bootstrap": "^5.2.2",
     "flow-bin": "^0.191.0",
+    "loader-utils": "^3.2.1",
+    "minimatch": "^5.1.2",
+    "nth-check": "^2.1.1",
     "react": "^18.1.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.1.0",
