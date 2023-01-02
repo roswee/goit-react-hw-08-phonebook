@@ -19,7 +19,7 @@ export const App = () => {
 
   useEffect(() => {
     dispatch(refreshUser());
-  }, [dispatch]);
+  }, []);
 
   return (
     <div>
@@ -48,6 +48,7 @@ export const App = () => {
               <PrivateRoute component={PhonebookPage} redirectTo="/login" />
             }
           />
+           <Route path="*" element={<HomePage />} />
         </Routes>
       </Suspense>
     </div>
