@@ -14,9 +14,9 @@ export const Navigation = () => {
         <div className="nav justify-content-between">
           <NavLink as="li" to="/login" className="nav-link text-white">
             Login
-          </NavLink>{' '}
+          </NavLink>
           <NavLink to="/register" as="li" className="nav-link text-white">
-            {' '}
+            
             Register
           </NavLink>
         </div>
