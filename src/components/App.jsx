@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import { useAuth } from 'hooks/useAuth';
 import { lazy, Suspense } from 'react';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
