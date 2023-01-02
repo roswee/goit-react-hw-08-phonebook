@@ -4,6 +4,9 @@ import { lazy, Suspense } from 'react';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { Navigation } from './Navigation/Navigation';
+import { dispatch } from 'react';
+import { refreshUser } from 'redux/auth/operations';
+import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HomePage = lazy(() => import('../pages/Home'));
